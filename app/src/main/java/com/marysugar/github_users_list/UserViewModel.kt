@@ -13,6 +13,8 @@ class UserViewModel(private val userApi: UserApi) : ViewModel() {
     val loading: LiveData<LoadingState>
         get() = _loading
 
+    var test = "a"
+
     private val _data = MutableLiveData<List<User>>()
     val data: LiveData<List<User>>
         get() = _data
