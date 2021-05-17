@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="com.marysugar.github_users_list.viewmodel.UserViewModel" />
+            type="com.marysugar.github_users_list.viewmodel.GithubViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -4,8 +4,8 @@ import android.app.Application
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.marysugar.github_users_list.api.UserApi
-import com.marysugar.github_users_list.viewmodel.UserViewModel
+import com.marysugar.github_users_list.api.GithubApi
+import com.marysugar.github_users_list.viewmodel.GithubViewModel
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import org.koin.android.ext.koin.androidApplication
@@ -47,13 +47,13 @@ val netModule = module {
 }
 
 val retrofitServiceModule = module {
-    fun provideUserService(retrofit: Retrofit): UserApi {
-        return retrofit.create(UserApi::class.java)
+    fun provideUserService(retrofit: Retrofit): GithubApi {
+        return retrofit.create(GithubApi::class.java)
     }
 
     single { provideUserService(get()) }
 }
 
 val viewModelModule = module {
-    viewModel { UserViewModel(get()) }
+    viewModel { GithubViewModel(get()) }
 }

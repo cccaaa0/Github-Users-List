@@ -12,11 +12,11 @@ import com.marysugar.github_users_list.R
 import com.marysugar.github_users_list.databinding.FragmentListBinding
 import com.marysugar.github_users_list.model.User
 import com.marysugar.github_users_list.view.adapter.UserAdapter
-import com.marysugar.github_users_list.viewmodel.UserViewModel
+import com.marysugar.github_users_list.viewmodel.GithubViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ListFragment : Fragment() {
-    private val userViewModel by viewModel<UserViewModel>()
+    private val githubViewModel by viewModel<GithubViewModel>()
     private lateinit var binding: FragmentListBinding
 
     override fun onCreateView(
@@ -39,7 +39,7 @@ class ListFragment : Fragment() {
         val userAdapter = UserAdapter { user: User -> partItemClicked(user) }
         binding.adapter = userAdapter
         // Observe data from viewModel
-        userViewModel.data.observe(this, {
+        githubViewModel.data.observe(this, {
             Log.d("ListFragment", it.toString())
             it.let(userAdapter::submitList)
         })
