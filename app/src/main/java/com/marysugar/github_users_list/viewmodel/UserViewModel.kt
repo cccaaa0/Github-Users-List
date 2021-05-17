@@ -1,9 +1,11 @@
-package com.marysugar.github_users_list
+package com.marysugar.github_users_list.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.marysugar.github_users_list.api.UserApi
+import com.marysugar.github_users_list.model.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

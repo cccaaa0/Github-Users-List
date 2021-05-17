@@ -5,6 +5,7 @@ import android.widget.ProgressBar
 import androidx.core.view.isVisible
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.marysugar.github_users_list.viewmodel.LoadingState
 import com.squareup.picasso.Picasso
 
 @BindingAdapter(value = ["setImageUrl"])

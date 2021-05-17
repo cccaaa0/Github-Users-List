@@ -1,9 +1,11 @@
-package com.marysugar.github_users_list
+package com.marysugar.github_users_list.di
 
 import android.app.Application
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.marysugar.github_users_list.api.UserApi
+import com.marysugar.github_users_list.viewmodel.UserViewModel
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import org.koin.android.ext.koin.androidApplication

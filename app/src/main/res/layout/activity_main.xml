@@ -5,11 +5,11 @@
     <data>
         <variable
             name="adapter"
-            type="com.marysugar.github_users_list.UserAdapter" />
+            type="com.marysugar.github_users_list.view.adapter.UserAdapter" />
 
         <variable
             name="viewModel"
-            type="com.marysugar.github_users_list.UserViewModel" />
+            type="com.marysugar.github_users_list.viewmodel.UserViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

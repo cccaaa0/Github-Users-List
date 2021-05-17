@@ -1,4 +1,4 @@
-package com.marysugar.github_users_list
+package com.marysugar.github_users_list.viewmodel
 
 data class LoadingState private constructor(val status: Status, val msg: String? = null) {
     companion object {

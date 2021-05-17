@@ -6,7 +6,7 @@
     <data>
         <variable
             name="user"
-            type="com.marysugar.github_users_list.User" />
+            type="com.marysugar.github_users_list.model.User" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

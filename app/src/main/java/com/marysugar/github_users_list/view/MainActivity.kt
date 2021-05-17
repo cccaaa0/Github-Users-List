@@ -1,4 +1,4 @@
-package com.marysugar.github_users_list.ui
+package com.marysugar.github_users_list.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.marysugar.github_users_list.R
-import com.marysugar.github_users_list.UserAdapter
-import com.marysugar.github_users_list.UserViewModel
+import com.marysugar.github_users_list.view.adapter.UserAdapter
+import com.marysugar.github_users_list.viewmodel.UserViewModel
 import com.marysugar.github_users_list.databinding.ActivityMainBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

@@ -1,4 +1,4 @@
-package com.marysugar.github_users_list
+package com.marysugar.github_users_list.model
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 

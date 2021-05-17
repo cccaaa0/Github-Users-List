@@ -1,4 +1,4 @@
-package com.marysugar.github_users_list
+package com.marysugar.github_users_list.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.marysugar.github_users_list.databinding.ItemUserBinding
+import com.marysugar.github_users_list.model.User
 
 class UserAdapter : ListAdapter<User, UserAdapter.UserViewHolder>(Companion) {
 
