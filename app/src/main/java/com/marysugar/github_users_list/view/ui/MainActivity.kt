@@ -1,7 +1,7 @@
 package com.marysugar.github_users_list.view.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.marysugar.github_users_list.R
 
 class MainActivity : AppCompatActivity() {

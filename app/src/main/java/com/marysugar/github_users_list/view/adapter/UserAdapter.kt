@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.marysugar.github_users_list.databinding.ItemUserBinding
 import com.marysugar.github_users_list.model.User
 
-class UserAdapter : ListAdapter<User, UserAdapter.UserViewHolder>(Companion) {
+class UserAdapter(val clickListener: (User) -> Unit)
+    : ListAdapter<User, UserAdapter.UserViewHolder>(Companion) {
 
     class UserViewHolder(val binding: ItemUserBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -28,5 +29,9 @@ class UserAdapter : ListAdapter<User, UserAdapter.UserViewHolder>(Companion) {
         val currentUser = getItem(position)
         holder.binding.user = currentUser
         holder.binding.executePendingBindings()
+
+        holder.binding.parent.setOnClickListener {
+            clickListener(currentUser)
+        }
     }
 }

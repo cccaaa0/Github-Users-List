@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.marysugar.github_users_list.R
@@ -37,12 +36,16 @@ class ListFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        val userAdapter = UserAdapter()
+        val userAdapter = UserAdapter { user: User -> partItemClicked(user) }
         binding.adapter = userAdapter
         // Observe data from viewModel
         userViewModel.data.observe(this, {
             Log.d("ListFragment", it.toString())
             it.let(userAdapter::submitList)
         })
+    }
+
+    private fun partItemClicked(user : User) {
+        Toast.makeText(context, "Clicked: ${user.id}", Toast.LENGTH_LONG).show()
     }
 }
