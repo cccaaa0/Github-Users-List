@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+<!--        &lt;!&ndash; ToolBarの背景色 &ndash;&gt;-->
+        <item name="colorPrimary">@color/purple_700</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <!-- ToolBarのタイトルテキスト色 -->
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+</resources>

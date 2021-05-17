@@ -11,6 +11,9 @@ import kotlinx.coroutines.launch
 
 class GithubViewModel(private val githubApi: GithubApi) : ViewModel() {
 
+    /**
+     * LiveData
+     */
     private val _loading = MutableLiveData<LoadingState>()
     val loading: LiveData<LoadingState>
         get() = _loading
@@ -18,6 +21,11 @@ class GithubViewModel(private val githubApi: GithubApi) : ViewModel() {
     private val _data = MutableLiveData<List<User>>()
     val data: LiveData<List<User>>
         get() = _data
+
+    /**
+     * Variable
+     */
+    var login = ""
 
     init {
         fetchData()
