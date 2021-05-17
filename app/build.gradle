@@ -39,11 +39,16 @@ android {
     dataBinding {
         enabled = true
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
 
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation "androidx.recyclerview:recyclerview:1.2.0"
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'

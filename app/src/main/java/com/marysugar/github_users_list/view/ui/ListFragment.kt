@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.marysugar.github_users_list.R
 import com.marysugar.github_users_list.databinding.FragmentListBinding
 import com.marysugar.github_users_list.model.User
@@ -36,13 +39,31 @@ class ListFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
+        setupAdapter()
+        setupRecyclerView()
+    }
+
+    private fun setupAdapter() {
         val userAdapter = UserAdapter { user: User -> partItemClicked(user) }
         binding.adapter = userAdapter
-        // Observe data from viewModel
+
         githubViewModel.data.observe(this, {
             Log.d("ListFragment", it.toString())
             it.let(userAdapter::submitList)
         })
+    }
+
+    private fun setupRecyclerView() {
+        binding.recyclerView.layoutManager =
+            GridLayoutManager(
+                context,
+                2,
+                LinearLayoutManager.VERTICAL ,
+                false
+            )
+
+        binding.recyclerView.adapter?.stateRestorationPolicy =
+            RecyclerView.Adapter.StateRestorationPolicy.ALLOW
     }
 
     private fun partItemClicked(user : User) {

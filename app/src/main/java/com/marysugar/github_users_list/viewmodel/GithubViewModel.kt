@@ -35,7 +35,7 @@ class GithubViewModel(private val githubApi: GithubApi) : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 _loading.postValue(LoadingState.LOADING)
-                val response = githubApi.users()
+                val response = githubApi.users((1..200).random())
                 if (response.isSuccessful) {
                     _data.postValue(response.body())
                     _loading.postValue(LoadingState.LOADED)
